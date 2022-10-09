@@ -8,14 +8,17 @@ Gemtel has recently experienced a decline in customer retention. So we were aske
 Our investigation found that of the accounts we researched, 483 customers had churned which was equal to about 14.5% of the client base we sampled. 
 
 ![prop to customer churn p3](https://user-images.githubusercontent.com/103558721/194739977-afdc6ff3-54ee-4be9-a3d3-00d9d700c2e3.png)
+How much of a hit was this loss? Well, lets talk money. We saw a loss of about $27,100 in revenue with the average plan costing $58. That equated to a substantial 16.9% of total revenue. 
 
 
 
-![p3 features](https://user-images.githubusercontent.com/103558721/194739983-435874bc-0ca4-47e9-84d5-010ae5c6e1af.png)
 ![p3 abu](https://user-images.githubusercontent.com/103558721/194739981-87217421-1861-4927-b714-019e9b9ed310.png)
 
-
-
+Well I’d first like to introduce you to a former customer, Mr. Abu Sami. We reached out to several customers who left and found Mr. Sami’s story was similar to many others.  We asked what his reasons were for stopping service with Gemtel. Mainly, it was due to high fees incurred for international calls (to speak with his family in the US) and the lack of resolve when he reached out to the customer care team.  We decided to investigate Mr. Sami’s account...
+![p3 features](https://user-images.githubusercontent.com/103558721/194739983-435874bc-0ca4-47e9-84d5-010ae5c6e1af.png)
+And we learned that this was a common scenario. The primary factors linked to the customer attrition were above average calls to the customer care team, the high price for international plans, and the lack of voicemail features
+We ran several models and found our most successful to be XGBoost. We gauged its performance using a metric called Recall. At 96%, we chose this metric as it minimizes the likelihood that our predictions would wrongly estimate a customer staying with Gemtel when they would actually churn- in other words we chose to err on the side of caution. Our data was limited to account/phone usage but lacked demographics. We were also limited in our sampling by geographic region vs international usage patterns
+Factors we used in our modeling included age of the account, the frequency of customer service calls, voicemail usage, total minutes, International plans, and overall cost of plans. 
 
 ![p3 customer care calls](https://user-images.githubusercontent.com/103558721/194739988-902f7ae5-62f7-46b7-8d3a-07fca9341352.png)
 
